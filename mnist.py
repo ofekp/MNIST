@@ -1,4 +1,4 @@
-import sys
+import time
 import numpy as np
 from keras.datasets import mnist
 
@@ -60,7 +60,7 @@ def main():
     min_delta_cost = 0.04
     K = 10  # 10 classes [0, 1, ..., 9]
 
-    np.set_printoptions(threshold=sys.maxsize)
+    #np.set_printoptions(threshold=sys.maxsize)
 
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
@@ -98,7 +98,9 @@ def main():
         prev_cost = curr_cost
         W = gd(W, X, y_train_one_hot, etta)
 
-    print("DONE!")
 
-
+start_time = time.time()
 main()
+elapsed_time_sec = time.time() - start_time
+elapsed_time_sec = float("{0:.2f}".format(elapsed_time_sec))
+print("DONE! Elapsed time [" + str(elapsed_time_sec) + " sec]")
