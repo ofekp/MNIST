@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+
+"""
+Created by Ofek P Dec 2019
+Interpreter Python 3.7
+
+Multi class logistic regression implementation for MNIST
+
+Example output:
+0        Accuracy [9.96%]        Cost [23026.437882220947]
+1        Accuracy [68.05%]       Cost [17460.64097398914]
+...
+2096     Accuracy [92.39%]       Cost [2691.3458081248396]
+2097     Accuracy [92.39%]       Cost [2691.30577193791]
+2098     Accuracy [92.39%]       Cost [2691.2657713311696]
+2099     Accuracy [92.39%]       Cost [2691.2258062588553]
+DONE! Elapsed time [224.71 sec]
+"""
+
 import time
 import numpy as np
 from keras.datasets import mnist
